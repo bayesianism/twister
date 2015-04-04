@@ -37,7 +37,7 @@ gulp.task('lint', function() {
 });
 
 // test client scripts
-gulp.task('karma', function(done) {
+gulp.task('karma', ['browserify', 'sass', 'minify-html'], function(done) {
   karma.start({
     configFile: __dirname+'/test/client/karma.conf.js',
     singleRun: true
