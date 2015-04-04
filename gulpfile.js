@@ -11,21 +11,26 @@ var minifyHTML = require('gulp-minify-html');
 
 
 // minify html
-gulp.task('minify-html', function() {
+gulp.task('minify-html', function(cb) {
   gulp.src('./assets/views/*.html')
   .pipe(minifyHTML({empty:true}))
   .pipe(gulp.dest('./static/html'));
+  cb();
 });
 
 // compile sass
-gulp.task('sass', function() {
+gulp.task('sass', function(cb) {
   gulp.src('./assets/styles/*.scss')
   .pipe(sass())
   .pipe(gulp.dest('./static/css'));
+  cb();
 });
 
 // bundle up client scripts with dependencies
-gulp.task('browserify', function() { bundler(); });
+gulp.task('browserify', function(cb) {
+    bundler();
+    cb();
+});
 
 gulp.task('browserify-uglify', function() { bundler(true); });
 
