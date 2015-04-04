@@ -50,6 +50,8 @@ gulp.task('mocha', function() {
   .pipe(mocha({reporter: 'nyan'}));
 });
 
+gulp.task('test', ['karma', 'mocha']);
+
 gulp.task('watch', ['minify-html', 'sass', 'browserify',
                     'lint'], function() {
   gulp.watch(['./assets/scripts/*.js'], ['lint', 'browserify']);
