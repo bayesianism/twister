@@ -11,25 +11,22 @@ var minifyHTML = require('gulp-minify-html');
 
 
 // minify html
-gulp.task('minify-html', function(cb) {
+gulp.task('minify-html', function() {
   gulp.src('./assets/views/*.html')
   .pipe(minifyHTML({empty:true}))
   .pipe(gulp.dest('./static/html'));
-  cb();
 });
 
 // compile sass
-gulp.task('sass', function(cb) {
+gulp.task('sass', function() {
   gulp.src('./assets/styles/*.scss')
   .pipe(sass())
   .pipe(gulp.dest('./static/css'));
-  cb();
 });
 
 // bundle up client scripts with dependencies
-gulp.task('browserify', function(cb) {
+gulp.task('browserify', function() {
     bundler();
-    cb();
 });
 
 gulp.task('browserify-uglify', function() { bundler(true); });
@@ -42,7 +39,7 @@ gulp.task('lint', function() {
 });
 
 // test client scripts
-gulp.task('karma', ['browserify', 'sass', 'minify-html'], function(done) {
+gulp.task('karma', function(done) {
   karma.start({
     configFile: __dirname+'/test/client/karma.conf.js',
     singleRun: true
@@ -54,6 +51,8 @@ gulp.task('mocha', function() {
   gulp.src('./test/server/*.js', {read: false})
   .pipe(mocha({reporter: 'nyan'}));
 });
+
+gulp.task('build', ['minify-html', 'sass', 'browserify']);
 
 gulp.task('test', ['karma', 'mocha']);
 
