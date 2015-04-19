@@ -33,7 +33,7 @@ gulp.task('browserify-uglify', function() { bundler(true); });
 
 // check javascript style
 gulp.task('lint', function() {
-  gulp.src(['./assets/scripts/*.js', './lib/*.js'])
+  gulp.src(['./assets/scripts/*.js', './server/*.js'])
   .pipe(jshint())
   .pipe(jshint.reporter('default'));
 });
