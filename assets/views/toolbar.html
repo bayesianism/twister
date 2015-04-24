@@ -1,0 +1,17 @@
+<md-toolbar >
+  <div class="md-toolbar-tools">
+    <span flex>
+        Welcome to <span class='app-name'>{{appName}}</span>!
+    </span>
+    <md-input-container md-no-float md-theme="docs-dark"  layout-padding layout="row">
+      <ng-md-icon icon="search" style="fill: white" size="24"></ng-md-icon>
+      <input ng-model="user.search" type="text" placeholder="Search #hashtag">
+    </md-input-container>
+    <span flex></span>
+    <md-button class="md-raised " ng-click="logIn($event)">LogIn</md-button>
+    <md-button class="md-raised " ng-click="aboutUs($event)">About</md-button>
+    <md-button class="md-icon-button">
+      <ng-md-icon icon="help" style="fill: white" size="28"></ng-md-icon>
+    </md-button>
+  </div>
+</md-toolbar>

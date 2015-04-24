@@ -1,7 +1,7 @@
 angular = require('angular');
 require('angular-google-chart');
 
-angular.module('twister.directives', ['googlechart'])
+angular.module('twister.directives', ['ngMdIcons', 'googlechart', 'ngMaterial'])
 
 .directive('geoChart', function() {
   return {
@@ -18,5 +18,11 @@ angular.module('twister.directives', ['googlechart'])
           };
       });
     }]
+  };
+})
+.directive('toolbar',function(){
+  return{
+    restrict: 'E',
+    templateUrl: '/html/toolbar.html',
   };
 });

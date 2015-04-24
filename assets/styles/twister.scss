@@ -1,8 +1,18 @@
 body {
   color: #111;
   background-color: #eee;
+  background: url(http://aosgroup.ca/wp-content/uploads/2013/10/blurry_background_iv-wallpaper-1920x12001.jpg)
 }
 
 .app-name {
-  color: #66d;
+  //color: #66d;
+}
+
+.md-toolbar-tools .md-button {
+  margin-left: 10px;
+  }
+
+.md-toolbar-tools  .md-input-container .input{
+  width:600px ;
+
 }
