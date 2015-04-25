@@ -1,13 +1,22 @@
-<md-dialog >
-  <md-content class="">
+<md-dialog style="width:60%" >
+  <md-content layout-padding >
     <div class="dialog-content" >
-      <img style="max-width: 150px;" alt="twitter logo" src="https://cdn1.iconfinder.com/data/icons/simple-icons/4096/twitter-4096-black.png">
-      <p>
-        The highest concentration of Mangifera genus is in the western part of Malesia (Sumatra, Java and Borneo) and in Burma and India. While other Mangifera species (e.g. horse mango, M. foetida) are also grown on a more localized basis, Mangifera indica—the "common mango" or "Indian mango"—is the only mango tree commonly cultivated in many tropical and subtropical regions.
-      </p>
-      <p>
-        It originated in Indian subcontinent (present day India and Pakistan) and Burma. It is the national fruit of India, Pakistan, and the Philippines, and the national tree of Bangladesh. In several cultures, its fruit and leaves are ritually used as floral decorations at weddings, public celebrations, and religious ceremonies.
-      </p>
+      <div layout="column" layout-align="center center">
+        <img style="max-width: 150px;" alt="twitter logo" src="https://cdn1.iconfinder.com/data/icons/simple-icons/4096/twitter-4096-black.png">
+        <h4 style="text-align:center; margin-top:-20px">PLEASE LOGIN USING<br> YOUR TWITTER CREDENTIALS</h4>
+      </div>
+      <div flex="50">
+        <md-input-container md-no-float layout-padding layout="row">
+          <ng-md-icon icon="person" style="fill: blue" size="32"></ng-md-icon>
+          <input ng-model="user.email" type="email" placeholder="Email" ng-required="true">
+        </md-input-container>
+
+
+        <md-input-container md-no-float layout-padding layout="row">
+          <ng-md-icon icon="lock" style="fill: red" size="32"></ng-md-icon>
+          <input ng-model="user.password" type="password" placeholder="Password" ng-required="true">
+        </md-input-container>
+      </div>
     </div>
   </md-content>
   <div class="md-actions" layout="column">
