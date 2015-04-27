@@ -1,16 +1,16 @@
-<md-toolbar .md-whiteframe-z4 >
-  <div class="md-toolbar-tools">
+<md-toolbar >
+  <div class="md-toolbar-tools" layout-padding layout="row" layout-m="column">
     <span flex>
-        Welcome to <span class='app-name'>{{appName}}</span>!
+        <h3>Welcome to {{appName}}!</h3>
     </span>
-    <md-input-container md-no-float md-theme="docs-dark"  layout-padding layout="row">
-      <ng-md-icon icon="search" style="fill: white" size="24"></ng-md-icon>
+    <md-input-container md-no-float md-theme="docs-dark" layout="row" layout-sm="column" layout-align="center center" >
+      <!-- <ng-md-icon icon="search" style="fill: white" size="24"></ng-md-icon> -->
       <input ng-model="user.search" type="text" placeholder="Search #hashtag">
     </md-input-container>
     <span flex></span>
-    <md-button class="md-raised " ng-click="logIn($event)">LogIn</md-button>
-    <md-button class="md-raised " ng-click="aboutUs($event)">About</md-button>
-    <md-button class="md-icon-button">
+    <md-button class="md-raised"  ng-click="logIn($event)">LogIn</md-button>
+    <md-button class="md-raised"  ng-click="aboutUs($event)">About</md-button>
+    <md-button class="md-icon-button" >
       <ng-md-icon icon="help" style="fill: white" size="28"></ng-md-icon>
     </md-button>
   </div>
