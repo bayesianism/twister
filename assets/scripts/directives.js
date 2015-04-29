@@ -25,4 +25,10 @@ angular.module('twister.directives', ['ngMdIcons', 'googlechart', 'ngMaterial'])
     restrict: 'E',
     templateUrl: '/html/toolbar.html',
   };
+})
+.directive('calendar',function(){
+  return{
+    restrict: 'E',
+    templateUrl: '/html/calendar.html',
+  };
 });

@@ -1,12 +1,8 @@
-<md-toolbar >
-  <div class="md-toolbar-tools" layout-padding layout="row" layout-m="column">
+<md-toolbar  >
+  <div class="md-toolbar-tools" layout-padding layout="row">
     <span flex>
-        <h3>Welcome to {{appName}}!</h3>
+      <h3>Welcome to {{appName}}!</h3>
     </span>
-    <md-input-container md-no-float md-theme="docs-dark" layout="row" layout-sm="column" layout-align="center center" >
-      <!-- <ng-md-icon icon="search" style="fill: white" size="24"></ng-md-icon> -->
-      <input ng-model="user.search" type="text" placeholder="Search #hashtag">
-    </md-input-container>
     <span flex></span>
     <md-button class="md-raised"  ng-click="logIn($event)">LogIn</md-button>
     <md-button class="md-raised"  ng-click="aboutUs($event)">About</md-button>

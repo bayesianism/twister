@@ -1,18 +1,28 @@
 body {
   color: #111;
   background-color: #eee;
-  background: url(http://aosgroup.ca/wp-content/uploads/2013/10/blurry_background_iv-wallpaper-1920x12001.jpg)
+  background: url(http://wallpoper.com/images/00/30/93/39/minimalistic-blur_00309339.jpg);
 }
 
-.app-name {
-  //color: #66d;
+
+
+form{
+  padding: 10px 30px 20px 25px ;
 }
 
+md-input-group.long >input{
+  width:100%;
+}
+
+md-content.middle{
+  background-color: #eee;
+
+}
+
+md-card.middle{
+ background-color: #eee;
+}
+// Toolbar
 .md-toolbar-tools .md-button {
   margin-left: 10px;
   }
-
-.md-toolbar-tools  .md-input-container .input{
-  width:600px ;
-
-}
